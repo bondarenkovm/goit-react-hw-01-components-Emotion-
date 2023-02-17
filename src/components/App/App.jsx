@@ -6,21 +6,11 @@ import Profile from 'components/Profile/Profile';
 import Statistics from 'components/Statistics/Statistics';
 import FriendList from 'components/FriendList/FriendList';
 import TransactionHistory from 'components/TransactionHistory/TransactionHistory';
+import { Container } from './App.styled';
 
 export const App = () => {
   return (
-    <div
-      style={{
-        padding: 20,
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101',
-        backgroundColor: 'rgb(163, 244, 217)',
-      }}
-    >
+    <Container>
       <Profile
         username={user.username}
         tag={user.tag}
@@ -31,6 +21,6 @@ export const App = () => {
       <Statistics title="Upload stats" stats={data} />
       <FriendList friends={friends} />
       <TransactionHistory items={transactions} />
-    </div>
+    </Container>
   );
 };

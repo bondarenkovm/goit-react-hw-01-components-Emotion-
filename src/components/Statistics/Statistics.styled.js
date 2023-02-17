@@ -1,4 +1,7 @@
-.statistics {
+import styled from '@emotion/styled';
+import randomColor from 'utils/RandomColor';
+
+export const Section = styled.section`
   width: 600px;
   background-color: #ffffff;
   box-shadow: rgb(0 0 0 / 20%) 0px 3px 3px -2px,
@@ -6,14 +9,15 @@
   border-radius: 15px;
   margin-top: 30px;
   text-align: center;
-}
-.stat_list {
+`;
+
+export const List = styled.ul`
   list-style: none;
   display: flex;
   padding: 0;
   margin: 0;
-}
-.item {
+`;
+export const Item = styled.li`
   display: flex;
   flex-direction: column;
   width: calc(100% / 5);
@@ -21,13 +25,14 @@
   border-radius: 15px;
   padding-top: 20px;
   padding-bottom: 20px;
-}
-.label {
+  background-color: ${randomColor};
+`;
+export const Label = styled.span`
   font-size: 20px;
   color: #ffffff;
-}
-.percentage {
+`;
+export const Percentage = styled.span`
   font-size: 30px;
   font-weight: 500;
   color: #ffffff;
-}
+`;
